@@ -1,0 +1,12 @@
+app: scf-golang
+component: scf
+name: scf-golang
+
+inputs:
+  src: ./
+  handler: main
+  runtime: Go1
+  namespace: default
+  region: ap-guangzhou
+  memorySize: 128
+  timeout: 3

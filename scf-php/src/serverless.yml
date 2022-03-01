@@ -1,0 +1,13 @@
+component: scf
+name: scf-php
+app: helloworld
+
+inputs:
+  src: ./
+  description: helloworld 空白模板函数
+  handler: index.main_handler
+  runtime: Php7
+  namespace: default
+  region: ap-guangzhou
+  memorySize: 128
+  timeout: 3

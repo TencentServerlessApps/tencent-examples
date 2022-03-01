@@ -1,0 +1,21 @@
+component: http
+name: flaskDemo
+
+inputs:
+  src:
+    # TODO: 安装python项目依赖到项目当前目录
+    hook: 'pip3 install -r requirements.txt -t ./'
+    dist: ./
+    exclude:
+      - .env
+      - 'requirements/**'
+      - '__pycache__/**'
+  region: ap-guangzhou
+  faas:
+    framework: flask
+    name: ${name}
+    runtime: Python3.6
+  apigw:
+    protocols:
+      - http
+      - https
